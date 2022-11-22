@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;400&family=Nunito:wght@200&family=Poppins&family=Quicksand&family=Signika+Negative&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+img{
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cover:hover img {
+  transform: scale(1.1);
+}
