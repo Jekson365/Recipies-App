@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Popslider } from '../components/Popslider'
+import { Popslider_2 } from '../components/Popslider_2'
+import { Mainslider } from '../components/Mainslider'
 export const Home = () => {
 
     const [data, setData] = useState([])
@@ -11,7 +14,7 @@ export const Home = () => {
             setData(JSON.parse(localStorage.getItem("data")))
         }
         else {
-            const API = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=548ede884c544b53ab828964473c3dd4&number=100'
+            const API = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=d8687e65c18743a2a1b4df77feabec91&number=100'
 
             const promise = await fetch(API)
 
@@ -31,11 +34,17 @@ export const Home = () => {
 
     return (
         <>
-            <Wrapper className='container'>
+            <Mainslider />
+            <div className='container'>
+                <Popslider_2 />
+                <Popslider />
+            </div>
+            <h3 className='fs-2 text-center m-5'>Our Products</h3>
+            <Wrapper className='container-fluid'>
                 {data.map((single) => {
                     return (
                         <Card>
-                            <Link to={`/details/${single.id}`}>
+                            <Link to={`/details/${single.id}`} >
                                 <div className="cover">
                                     <img src={single.image} />
                                 </div>
@@ -56,6 +65,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100% !important;  
     .cover {
         width: 100%;
         border-radius: 10px;
@@ -79,7 +89,7 @@ const Wrapper = styled.div`
 `
 const Card = styled.div`
     padding: 10px;
-    width: 250px;
+    width:250px;
     margin: 10px;
     height: 270px;
     background-color: white;

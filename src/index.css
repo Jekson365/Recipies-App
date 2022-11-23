@@ -6,10 +6,39 @@
     box-sizing: border-box;
     font-family: 'Montserrat',sans-serif;
 }
+body {
+}
+.cover {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
 img{
   transition: 0.3s;
   cursor: pointer;
 }
 .cover:hover img {
   transform: scale(1.1);
+}
+.content {
+    width: 100%;
+  display: flex;
+  align-items:end;
+  padding: 60px;
+  justify-content: start;
+  height: 100%;
+}
+.selection {
+  border: 2px solid black;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 3px;
+  transition: 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.selection:hover {
+  background-color: black;
+  color: white;
 }
