@@ -21,7 +21,7 @@ export const Popslider_2 = () => {
 
         }
         else {
-            const API = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=d8687e65c18743a2a1b4df77feabec91&cuisine=American`)
+            const API = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7aeb4dab7ae748f49d916de707cdf97e&cuisine=American`)
 
             const data = await API.json()
 
