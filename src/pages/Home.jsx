@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Popslider } from '../components/Popslider'
 import { Popslider_2 } from '../components/Popslider_2'
 import { Mainslider } from '../components/Mainslider'
+import { Navbar } from '../components/Navbar'
 export const Home = () => {
 
     const [data, setData] = useState([])

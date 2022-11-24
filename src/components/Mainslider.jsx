@@ -31,11 +31,11 @@ export const Mainslider = () => {
                 centeredSlides={true}
                 speed={1500}
                 autoplay={{
-                  delay: 1500,
-                  disableOnInteraction: false,
+                    delay: 1500,
+                    disableOnInteraction: false,
                 }}
                 pagination={{
-                  clickable: true,
+                    clickable: true,
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
@@ -43,9 +43,7 @@ export const Mainslider = () => {
                 {sliderContent.map((each) => {
                     return (
                         <SwiperSlide className='cover' style={{ "background": `url(${each.img})` }}>
-                            <div className="content">
-                                <h1 className="fs-2 text-white">{each.priority}</h1>
-                            </div>
+                            <h1 className="fs-2 text-white">{each.priority}</h1>
                         </SwiperSlide>
                     )
                 })}
