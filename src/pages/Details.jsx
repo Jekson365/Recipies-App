@@ -11,7 +11,7 @@ export const Details = () => {
     const id = useParams()
 
     const getDetails = async (id) => {
-        const API = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=6c9f9c60ba5c49f990cccc4a43bfc54b`)
+        const API = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=7aeb4dab7ae748f49d916de707cdf97e`)
         const data = await API.json()
 
         setData(data)
