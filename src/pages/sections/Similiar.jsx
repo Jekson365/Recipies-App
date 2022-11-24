@@ -74,7 +74,7 @@ export const Similiar = () => {
 
 
 const Card = styled.div`
-    max-width: 250px;
+    width: 250px;
     height:200px;
     padding: 10px;
     background-color: #EB6440;

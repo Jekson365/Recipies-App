@@ -1,6 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from 'swiper'
+import { Autoplay, Pagination } from 'swiper'
 import "swiper/css";
 import "swiper/css/pagination";
 import { useState } from 'react';
@@ -17,12 +17,13 @@ export const Popslider = () => {
 
         if (localStorage.getItem("popular")) {
             setPopular(JSON.parse(localStorage.getItem('popular')))
-
         }
         else {
             const API = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=d8687e65c18743a2a1b4df77feabec91&cuisine=Italian`)
 
             const data = await API.json()
+
+            setPopular(data.results)
 
             localStorage.setItem('popular', JSON.stringify(data.results))
         }
@@ -41,6 +42,9 @@ export const Popslider = () => {
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
+                autoplay={{
+                    delay:2500
+                }}
                 pagination={{
                     clickable: true,
                 }}
@@ -58,10 +62,10 @@ export const Popslider = () => {
                         spaceBetween: 50,
                     },
                 }}
-                modules={[Pagination]}
+                modules={[Pagination,Autoplay]}
                 className="mySwiper"
             >
-                {popular.map((each) => {
+                {popular && popular.map((each) => {
                     return (
                         <>
                             <SwiperSlide className='d-flex align-items-center justify-content-center'>

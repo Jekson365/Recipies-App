@@ -21,6 +21,8 @@ export const Home = () => {
 
             const data = await promise.json()
 
+            setData(data.results)
+
             localStorage.setItem("data", JSON.stringify(data.results))
 
         }
