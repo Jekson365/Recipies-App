@@ -14,7 +14,7 @@ export const Similiar = () => {
     const [similiar, setSimiliar] = useState([])
     const id = useParams()
     const getSimiliar = async (id) => {
-        const API = await fetch(`https://api.spoonacular.com/recipes/${id}/similar?apiKey=d8687e65c18743a2a1b4df77feabec91`)
+        const API = await fetch(`https://api.spoonacular.com/recipes/${id}/similar?apiKey=07a98266a5424723b0bffb4a7b18a123`)
         const data = await API.json()
 
         setSimiliar(data)

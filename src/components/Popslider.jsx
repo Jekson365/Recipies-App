@@ -19,7 +19,7 @@ export const Popslider = () => {
             setPopular(JSON.parse(localStorage.getItem('popular')))
         }
         else {
-            const API = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7aeb4dab7ae748f49d916de707cdf97e&cuisine=Italian`)
+            const API = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=07a98266a5424723b0bffb4a7b18a123&cuisine=Italian`)
 
             const data = await API.json()
 

@@ -14,7 +14,7 @@ export const SearchInp = () => {
   const [data, setData] = useState([])
   const SearchByQuery = async (query, cuisine, diet) => {
 
-    const API = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7aeb4dab7ae748f49d916de707cdf97e&query=${query}&cuisine=${cuisine}
+    const API = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=07a98266a5424723b0bffb4a7b18a123&query=${query}&cuisine=${cuisine}
     &diet=${diet}
     `)
     const data = await API.json()

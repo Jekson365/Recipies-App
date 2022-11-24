@@ -1,7 +1,7 @@
 {
   "name": "myapp2",
+  "homepage": "https://jekson365.github.io/Recipies-App/",
   "version": "0.1.0",
-  "homepage": "https://jekson365.github.io/Recipies-App",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
