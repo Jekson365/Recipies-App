@@ -15,7 +15,7 @@ export const Home = () => {
             setData(JSON.parse(localStorage.getItem("data")))
         }
         else {
-            const API = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=d8687e65c18743a2a1b4df77feabec91&number=100'
+            const API = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=7aeb4dab7ae748f49d916de707cdf97e&number=100'
 
             const promise = await fetch(API)
 
